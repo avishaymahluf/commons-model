@@ -49,6 +49,9 @@ public class UpdateLaunchRQ {
     @ElementLength(max = ValidationConstraints.MAX_NAME_LENGTH)
     private Set<String> tags;
 
+    @JsonProperty("number")
+    private Long number;
+
     public String getDescription() {
         return description;
     }
@@ -71,6 +74,14 @@ public class UpdateLaunchRQ {
 
     public void setMode(Mode mode) {
         this.mode = mode;
+    }
+
+    public Long getNumber() {
+        return number;
+    }
+
+    public void setNumber(Long number) {
+        this.number = number;
     }
 
     @Override
